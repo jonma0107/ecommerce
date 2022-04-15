@@ -122,7 +122,7 @@ section h2 span {
   margin-top: 5rem;
 }
 
-.sobre-nosotros-grid {
+/* .sobre-nosotros-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 8rem;
@@ -130,7 +130,18 @@ section h2 span {
 
 .texto-nosotros {
   grid-column: 2 / 3;
+} */
+
+.sobre-nosotros-grid {
+  display: flex;
+  justify-content: flex-end;
+
 }
+
+.texto-nosotros {
+  flex-basis: 45%;
+}
+
 
 
 /* footer nav a:nth-child(2){
