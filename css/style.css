@@ -32,6 +32,7 @@ a {
   color: #000;
 }
 
+
 .contenedor {
   max-width: 120rem;
   margin: 0 auto; /* Truco para Centrar un Div Padre */
@@ -41,6 +42,11 @@ a {
 img {
   max-width: 100%;
   display: block;
+}
+
+/* Utilidades */
+.text-center {
+  text-align: center;
 }
 
 /*** Header y Navegación ***/
@@ -87,9 +93,9 @@ section h2 span {
   padding-top: 5rem;
 }
 
-.categorias h2 {
+/* .categorias h2 {
   text-align: center;
-}
+} */
 
 .categoria a {
   display: block; /* por default los enlaces e img tienen display inline */
@@ -127,7 +133,6 @@ section h2 span {
   grid-template-columns: repeat(2, 1fr);
   column-gap: 8rem;
 }
-
 .texto-nosotros {
   grid-column: 2 / 3;
 } */
@@ -135,11 +140,41 @@ section h2 span {
 .sobre-nosotros-grid {
   display: flex;
   justify-content: flex-end;
-
 }
-
 .texto-nosotros {
   flex-basis: 45%;
+  color: #fff;
+}
+
+/* Listado Productos */
+.contenido-principal {
+  padding-top: 5rem;
+
+}
+.producto {
+  background-color: #037bc0;
+}
+
+.texto-producto {
+  text-align: center;
+  color: #fff;
+}
+
+.texto-producto h3 {
+  margin: 0;
+}
+
+.texto-producto p {
+  margin: 0 0 .5rem 0;
+}
+
+.texto-producto .precio {
+  font-size: 2.8rem;
+  font-weight: 900;
+}
+
+.texto-producto a {
+
 }
 
 
