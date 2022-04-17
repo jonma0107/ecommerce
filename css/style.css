@@ -158,6 +158,7 @@ section h2 span {
 .texto-producto {
   text-align: center;
   color: #fff;
+  padding: 2rem;
 }
 
 .texto-producto h3 {
@@ -174,8 +175,26 @@ section h2 span {
 }
 
 .texto-producto a {
-
+  background-color: #8cbc00;
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 900;
+  padding: 1rem;
+  transition: background-color .3s ease-out;
 }
+
+.texto-producto a:hover {
+  background-color: #769c02;
+}
+
+/* .producto img:hover {
+  transform: scale(.8);
+}
+.producto img {
+  transition: transform .3s ease-out;;
+} */
+
 
 
 
