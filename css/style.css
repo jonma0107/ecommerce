@@ -2,6 +2,7 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; /* Hack base de HTML: 1REM = 10px */
+
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -10,6 +11,7 @@ body {
   font-family: 'Raleway', sans-serif;
   font-size: 1.6rem;
   line-height: 2;
+
 }
 
 /*** Globales ***/
@@ -41,7 +43,9 @@ a {
 
 img {
   max-width: 100%;
-  display: block;
+  /* display: block; */
+  height: auto;
+
 }
 
 /* Utilidades */
@@ -113,7 +117,7 @@ section h2 span {
   background-color: #037bc0;
   color: #fff;
   /* border-radius: 40px; */
-  border-bottom-left-radius: 4rem;
+  border-top-left-radius: 4rem;
   border-bottom-right-radius: 4rem;
   font-weight: 700;
 }
@@ -132,25 +136,39 @@ section h2 span {
   background-repeat: no-repeat;
   background-size: 100%, 50%;
   margin-top: 5rem;
+
 }
 
-/* .sobre-nosotros-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 8rem;
-}
-.texto-nosotros {
-  grid-column: 2 / 3;
+/* .sobre-nosotros {
+  background-image: linear-gradient(to right, transparent 50%, #037bc0 50%, red 100%), url(../img/nosotros.jpg);
+  background-position: left center;
+  padding: 10rem 0;
+  background-repeat: no-repeat;
+  background-size: 100%, 120rem;
+  margin-top: 5rem;
+
 } */
 
 .sobre-nosotros-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 8rem;
+
+}
+.texto-nosotros {
+  grid-column: 2 / 3;
+  color: #fff;
+
+}
+
+/* .sobre-nosotros-grid {
   display: flex;
   justify-content: flex-end;
 }
 .texto-nosotros {
   flex-basis: 45%;
   color: #fff;
-}
+} */
 
 /* Listado Productos */
 .contenido-principal {
@@ -168,12 +186,29 @@ section h2 span {
 .producto:nth-child(1) {
   grid-column-start: 1;
   grid-column-end: 7;
-  grid-column: 1 / 7;
+  /* grid-column: 1 / 7; */
+  display: grid;
+  grid-template-columns: 3fr 1fr;
 }
+
+.producto:nth-child(1) img {
+  height: 43rem;
+  width: 100%;
+  object-fit: cover;
+}
+
 .producto:nth-child(2) {
   grid-column-start: 1;
   grid-column-end: 4;
 }
+
+.producto:nth-child(2) img,
+.producto:nth-child(3) img {
+  height: 30rem;
+  width: 100%;
+  object-fit: cover;
+}
+
 .producto:nth-child(3) {
   grid-column-start: 4;
   grid-column-end: 7;
@@ -215,7 +250,7 @@ section h2 span {
 }
 
 .texto-producto a {
-  background-color: #8cbc00;
+  background-color: #769c02;
   display: block;
   color: #fff;
   text-transform: uppercase;
@@ -230,9 +265,10 @@ section h2 span {
 }
 
 .texto-producto a:hover {
-  background-color: #769c02;
+  background-color: #8cbc00;
   transform: scale(1);
   transition: transform .5s ease-out;
+  text-decoration: underline;
 }
 
 /* .producto img:hover {
