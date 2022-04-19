@@ -260,21 +260,28 @@ section h2 span {
 
 /*-* SECCIÓN FOOTER ***/
 .footer-principal{
-  padding-top: 10rem;
+  padding-top: 5rem;
 
+}
+.footer-principal h3 {
+  margin-top: 5rem;
+  margin-bottom: .5rem;
 }
 .listado-footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   border-top: 1px solid #000;
-  padding-top: 5rem;
+  /* padding-top: 5rem; */
   /* text-align: center; */
 
 }
-.grupo-footer a {
+/* .grupo-footer a {
   display: grid;
   text-align: left;
   line-height: 3;
+} */
+.grupo-footer a {
+  display: block;
 }
 .grupo-footer a:hover {
   color: #037bc0;
