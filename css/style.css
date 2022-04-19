@@ -72,8 +72,13 @@ img {
   justify-content: space-between;
 }
 
+.nav-principal a {
+  font-weight: bold;
+}
+
 .nav-principal a:hover {
   color: #037bc0;
+  text-decoration: underline;
 }
 
 .hero {
@@ -110,6 +115,7 @@ section h2 span {
   /* border-radius: 40px; */
   border-bottom-left-radius: 4rem;
   border-bottom-right-radius: 4rem;
+  font-weight: 700;
 }
 
 .listado-categorias {
