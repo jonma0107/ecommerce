@@ -60,6 +60,7 @@ img {
 .nombre-sitio span {
   color: #037bc0;
 }
+
 .contenedor-navegacion {
   /* border-color: #e1e1e1;
   border-top-style: solid;
@@ -78,6 +79,7 @@ img {
   color: #037bc0;
   text-decoration: underline;
 }
+
 .hero {
   background-image: url(../img/principal.jpg);
   background-repeat: no-repeat;
@@ -136,19 +138,15 @@ section h2 span {
   margin-top: 5rem;
 
 } */
-
 .sobre-nosotros-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 8rem;
-
 }
 .texto-nosotros {
   grid-column: 2 / 3;
   color: #fff;
-
 }
-
 /* .sobre-nosotros-grid {
   display: flex;
   justify-content: flex-end;
@@ -162,7 +160,6 @@ section h2 span {
 .contenido-principal {
   padding-top: 5rem;
 }
-
 .listado-productos {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -170,7 +167,6 @@ section h2 span {
   row-gap: 2rem; */
   gap: 2rem;
 }
-
 .producto:nth-child(1) {
   grid-column-start: 1;
   grid-column-end: 7;
@@ -178,25 +174,21 @@ section h2 span {
   display: grid;
   grid-template-columns: 3fr 1fr;
 }
-
 .producto:nth-child(1) img {
   height: 43rem;
   width: 100%;
   object-fit: cover;
 }
-
 .producto:nth-child(2) {
   grid-column-start: 1;
   grid-column-end: 4;
 }
-
 .producto:nth-child(2) img,
 .producto:nth-child(3) img {
   height: 30rem;
   width: 100%;
   object-fit: cover;
 }
-
 .producto:nth-child(3) {
   grid-column-start: 4;
   grid-column-end: 7;
@@ -223,20 +215,16 @@ section h2 span {
   color: #fff;
   padding: 2rem;
 }
-
 .texto-producto h3 {
   margin: 0;
 }
-
 .texto-producto p {
   margin: 0 0 .5rem 0;
 }
-
 .texto-producto .precio {
   font-size: 2.8rem;
   font-weight: 900;
 }
-
 .texto-producto a {
   background-color: #769c02;
   display: block;
