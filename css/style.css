@@ -127,7 +127,6 @@ section h2 span {
   background-repeat: no-repeat;
   background-size: 100%, 50%;
   margin-top: 5rem;
-
 }
 /* .sobre-nosotros {
   background-image: linear-gradient(to right, transparent 50%, #037bc0 50%, red 100%), url(../img/nosotros.jpg);
@@ -142,6 +141,7 @@ section h2 span {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 8rem;
+
 }
 .texto-nosotros {
   grid-column: 2 / 3;
@@ -281,6 +281,19 @@ section h2 span {
   padding-top: 5rem;
 }
 
+
+/*** Página NOSOTROS ***/
+.contenido-nosotros {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+  column-gap: 4rem;
+}
+.informacion-nosotros{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 /* .producto img:hover {
   transform: scale(.8);
