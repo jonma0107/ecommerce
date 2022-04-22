@@ -344,6 +344,22 @@ section h2 span {
   width: 60rem;
   margin: 0 auto;
 }
+
+
+/*** GALERÍA ***/
+.galeria {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3 , 1fr);
+  gap: 2rem;
+}
+.galeria img {
+  height: 40rem;
+  width: 40rem;
+  object-fit: cover;
+}
 /* .producto img:hover {
   transform: scale(.8);
 }
