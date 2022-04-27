@@ -345,6 +345,11 @@ section h2 span {
   margin: 0 auto;
 }
 
+.contenedor-blog aside a:hover {
+  text-decoration: underline;
+  color: #037bc0;
+}
+
 
 /*** GALERÍA ***/
 .galeria {
