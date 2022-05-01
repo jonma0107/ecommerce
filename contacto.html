@@ -32,32 +32,34 @@
     <main class="contenido-principal contenedor">
         <h2 class="text-center">Contacto</h2>
 
-        <form action="">
+        <!-- FORMULARIO -->
+
+        <form action="https://formsubmit.co/jm.abogadocitta@gmail.com" method="post">
           <fieldset>
             <legend>Tus Datos</legend>
             <div class="campo">
               <label for="nombre">Nombre: </label>
-              <input type="text" placeholder="Coloca tu nombre" name="" id="nombre">
+              <input type="text" placeholder="Coloca tu nombre" name="" id="nombre" required>
             </div>
 
             <div class="campo">
               <label for="asunto">Asunto: </label>
-              <input type="text" placeholder="Tu asunto" name="" id="asunto">
+              <input type="text" placeholder="Tu asunto" name="" id="asunto" required>
             </div>
 
             <div class="campo">
               <label for="email">E-mail: </label>
-              <input type="email" placeholder="Tu Email" name="" id="email">
+              <input type="email" placeholder="Tu Email" name="" id="email" required>
             </div>
 
             <div class="campo">
               <label for="tel">Teléfono: </label>
-              <input type="tel" placeholder="Tu Teléfono" name="" id="tel">
+              <input type="tel" placeholder="Tu Teléfono" name="" id="tel" required>
             </div>
 
             <div class="campo">
               <label for="date">Fecha: </label>
-              <input type="date" placeholder="" name="" id="date">
+              <input type="date" placeholder="" name="" id="date" required>
             </div>
 
             <div class="campo">
@@ -73,12 +75,48 @@
 
           <fieldset>
             <legend>País</legend>
+            <div class="campo">
+              <label for="pais">País</label>
+              <select name="" id="pais">
+                <option disabled>--Seleccione--</option>
+                <option selected>Colombia</option>
+                <option value="MX">México</option>
+                <option value="AR">Argentina</option>
+                <option value="CL">Chile</option>
+              </select>
+            </div>
           </fieldset>
 
           <fieldset>
             <legend>Información Extra</legend>
+            <div class="campo">
+              <label for="cliente">Cliente</label>
+              <input type="radio" name="SAME" id="cliente">
+            </div>
+            <div class="campo">
+              <label for="proveedor">Proveedor</label>
+              <input type="radio" name="SAME" id="proveedor">
+            </div>
+            <div class="campo">
+              <label for="Empleado">Empleado</label>
+              <input type="radio" name="SAME" id="Empleado">
+            </div>
+
+            <div class="campo">
+              <label for="categoria">Categoría de Interés</label>
+              <input list="categorias" name="categorias" id="categoria">
+              <datalist id="categorias">
+                <option value="Cocina">
+                <option value="Oficina">
+                <option value="Habitaciones">
+                <option value="Salas">
+              </datalist>
+            </div><!-- datalist -->
+
           </fieldset>
-        </form>
+
+          <input type="submit" value="Enviar Formulario">
+        </form> <!-- fin formulario -->
 
     </main>
 
