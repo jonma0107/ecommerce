@@ -34,7 +34,7 @@
 
         <!-- FORMULARIO -->
 
-        <form action="https://formsubmit.co/jm.abogadocitta@gmail.com" method="post">
+        <form class="formulario" action="https://formsubmit.co/jm.abogadocitta@gmail.com" method="post">
           <fieldset>
             <legend>Tus Datos</legend>
             <div class="campo">
@@ -64,10 +64,10 @@
 
             <div class="campo">
               <label for="mns">Mensaje: </label>
-              <textarea name="" id="mns" cols="150" rows="10"></textarea>
+              <textarea name="" id="mns" cols="50" rows="10"></textarea>
             </div>
 
-            <div class="campo">
+            <div class="campo file">
               <label for="file">Adjuntar: </label>
               <input type="file" placeholder="" name="" id="file">
             </div>
@@ -89,15 +89,15 @@
 
           <fieldset>
             <legend>Información Extra</legend>
-            <div class="campo">
+            <div class="campo extra">
               <label for="cliente">Cliente</label>
               <input type="radio" name="SAME" id="cliente">
             </div>
-            <div class="campo">
+            <div class="campo extra">
               <label for="proveedor">Proveedor</label>
               <input type="radio" name="SAME" id="proveedor">
             </div>
-            <div class="campo">
+            <div class="campo extra">
               <label for="Empleado">Empleado</label>
               <input type="radio" name="SAME" id="Empleado">
             </div>
@@ -115,7 +115,7 @@
 
           </fieldset>
 
-          <input type="submit" value="Enviar Formulario">
+          <input class="enviar" type="submit" value="Enviar Formulario">
         </form> <!-- fin formulario -->
 
     </main>

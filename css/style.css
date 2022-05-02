@@ -327,7 +327,7 @@ section h2 span {
   display: block;
   color: #fff;
   text-transform: uppercase;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   /* transition: background-color .3s ease-out; */
   border-top-left-radius: 4rem;
   border-bottom-right-radius: 4rem;
@@ -365,6 +365,81 @@ section h2 span {
   width: 40rem;
   object-fit: cover;
 }
+
+/*** FORMULARIO ***/
+.formulario{
+  max-width: 600px;
+  margin: 0 auto;
+}
+.formulario fieldset {
+  border: 2px solid #037bc0;
+  margin-bottom: 2rem;
+}
+.formulario legend {
+  background-color: #005485;
+  width: 80%;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 900;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 4rem;
+}
+.campo {
+  display: flex;
+  margin-bottom: 2rem;
+}
+.campo label {
+  flex-basis: 10rem;
+}
+/* .campo input[type="text"],
+.campo input[type="email"],
+.campo input[type="tel"],
+.campo input[type="date"],
+.campo textarea,
+.campo select,
+.campo input[list="categorias"] {
+  flex: 1;
+  border: 2px solid #037bc0;
+  padding: 1rem;
+} */
+.campo input:not([type="file"],[type="radio"]),
+.campo textarea,
+.campo select {
+  flex: 1;
+  border: 2px solid #037bc0;
+  padding: 1rem;
+}
+.file {
+  margin-top: 3rem;
+  justify-content: center;
+}
+.extra {
+  justify-content: center;
+}
+.enviar {
+  border: none;
+  padding: 1.5rem 3rem;
+  width: 100%;
+  border-radius: 4rem;
+}
+.enviar {
+  background-color: #769c02;
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+  transform: scale(.8);
+  text-align: center;
+}
+.enviar:hover {
+  cursor: pointer;
+  background-color: #8cbc00;
+  transform: scale(1);
+  transition: transform .5s ease-out;
+  font-weight: 700;
+}
+
 /* .producto img:hover {
   transform: scale(.8);
 }
