@@ -10,12 +10,42 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/skeleton.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+    <!-- <header>
+        <h1 class="nombre-sitio">Tienda <span>Muebles</span></h1> -->
+        <!-- CARRITO DE COMPRAS -->
+        <div class="two columns u-pull-right">
+          <ul>
+              <li class="submenu">
+                      <img src="img/cart.png" id="img-carrito">
+                      <div id="carrito">
+
+                              <table id="lista-carrito" class="u-full-width">
+                                  <thead>
+                                      <tr>
+                                          <th>Imagen</th>
+                                          <th>Nombre</th>
+                                          <th>Precio</th>
+                                          <th>Cantidad</th>
+                                          <th></th>
+                                      </tr>
+                                  </thead>
+                                  <tbody></tbody>
+                              </table>
+
+                              <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
+                      </div>
+              </li>
+          </ul>
+      </div>
+
     <header>
         <h1 class="nombre-sitio">Tienda <span>Muebles</span></h1>
+
     </header><!-- Título sitio -->
 
     <div class="contenedor-navegacion">
@@ -74,7 +104,7 @@
                     <h3>Producto 1</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto maxime, et cumque omnis.</p>
                     <p class="precio">$1.000.000.00</p>
-                    <a href="#">Agregar al Carrito</a>
+                    <a href="#" class="agregar-carrito" data-id="1">Agregar al Carrito</a>
 
                 </div> <!-- INFO Producto -->
             </div> <!-- Producto -->
@@ -85,7 +115,7 @@
                     <h3>Producto 2</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto maxime, et cumque omnis.</p>
                     <p class="precio">$1.000.000.00</p>
-                    <a href="#">Agregar al Carrito</a>
+                    <a href="#" class="agregar-carrito" data-id="2">Agregar al Carrito</a>
 
                 </div> <!-- INFO Producto -->
             </div> <!-- Producto -->
@@ -96,7 +126,7 @@
                     <h3>Producto 3</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto maxime, et cumque omnis.</p>
                     <p class="precio">$1.000.000.00</p>
-                    <a href="#">Agregar al Carrito</a>
+                    <a href="#" class="agregar-carrito" data-id="3">Agregar al Carrito</a>
 
                 </div> <!-- INFO Producto -->
             </div> <!-- Producto -->
@@ -107,7 +137,7 @@
                     <h3>Producto 4</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto maxime, et cumque omnis.</p>
                     <p class="precio">$1.000.000.00</p>
-                    <a href="#">Agregar al Carrito</a>
+                    <a href="#" class="agregar-carrito" data-id="4">Agregar al Carrito</a>
 
                 </div> <!-- INFO Producto -->
             </div> <!-- Producto -->
@@ -118,7 +148,7 @@
                     <h3>Producto 5</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto maxime, et cumque omnis.</p>
                     <p class="precio">$1.000.000.00</p>
-                    <a href="#">Agregar al Carrito</a>
+                    <a href="#" class="agregar-carrito" data-id="5">Agregar al Carrito</a>
 
                 </div> <!-- INFO Producto -->
             </div> <!-- Producto -->
@@ -129,7 +159,7 @@
                     <h3>Producto 6</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto maxime, et cumque omnis.</p>
                     <p class="precio">$1.000.000.00</p>
-                    <a href="#">Agregar al Carrito</a>
+                    <a href="#" class="agregar-carrito" data-id="6">Agregar al Carrito</a>
 
                 </div> <!-- INFO Producto -->
             </div> <!-- Producto -->
@@ -171,7 +201,7 @@
         <p class="footer-copy">© JM. All rights reserved</p>
     </footer>
 
-
+    <script src="./carrito.js"></script>
 
 </body>
 
