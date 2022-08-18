@@ -18,7 +18,7 @@ function agregarProducto(e) {
 
   }
 
-}
+} // fin función agregarProducto
 
 // Lee el contenido del HTML al que le dimos click, y extrae la información del curso
 function leerDatosProducto(producto) {
