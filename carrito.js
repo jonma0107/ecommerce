@@ -21,23 +21,37 @@ function agregarProducto(e) {
 }
 
 // Lee el contenido del HTML al que le dimos click, y extrae la información del curso
-function leerDatosProducto(curso) {
+function leerDatosProducto(producto) {
   // console.log(curso);
 
   // Crear objeto con el contenido del curso seleccionado
   const objetoProducto = {
-    imagen: curso.querySelector('img').src,
-    titulo: curso.querySelector('h3').textContent,
-    precio: curso.querySelector('.precio').textContent,
-    id: curso.querySelector('a').getAttribute('data-id'),
+    imagen: producto.querySelector('img').src,
+    titulo: producto.querySelector('h3').textContent,
+    precio: producto.querySelector('.precio').textContent,
+    id: producto.querySelector('a').getAttribute('data-id'),
     cantidad: 1
   }
-  // Agrega Objetos al arreglo de carritoCompras
-  carritoCompras = [...carritoCompras, objetoProducto];
-  console.log(carritoCompras);
+  // ACTUALIZAR UN PRODUCTO QUE YA EXISTE
+  const existe = carritoCompras.some(producto => producto.id === objetoProducto.id);
+  if (existe) {
+    const productos = carritoCompras.map(producto => {
+      if (producto.id === objetoProducto.id) {
+        producto.cantidad++;
+        return producto;
+      } else {
+        return producto;
+      }
+    });
+    carritoCompras = [...productos];
+  } else {
+    // Agrega Objetos al arreglo de carritoCompras
+    carritoCompras = [...carritoCompras, objetoProducto];
+
+  }
 
   carritoHTML();
-}
+} // fin función leerDatosProducto
 
 
 // MOSTRAR LOS PRODUCTOS DEL CARRITO EN HTML
@@ -47,10 +61,23 @@ function carritoHTML() {
 
   // Recorre el carritoCompras y genera el HTML
   carritoCompras.forEach(producto => {
+    const { imagen, titulo, precio, cantidad, id } = producto;
     const row = document.createElement('tr');
     row.innerHTML = `
       <td>
-        ${producto.titulo}
+        <img src="${imagen}"/>
+      </td>
+      <td>
+        ${titulo}
+      </td>
+      <td>
+        ${precio}
+      </td>
+      <td>
+        ${cantidad}
+      </td>
+      <td>
+        <a href="#" class="borrar-producto"> X </a>
       </td>
     `;
 

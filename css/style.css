@@ -456,6 +456,10 @@ section h2 span {
     font-size: 20px;
 }  */
 
+
+
+/* ********************************* CARRITO ***************************** */
+
 ul {
   list-style: none;
 }
@@ -482,4 +486,11 @@ ul {
   padding: 20px;
   min-height: 400px;
   min-width: 300px;
+}
+.borrar-producto{
+  padding: 5px 10px;
+  background-color: red;
+  color: #fff;
+  border-radius: 100%;
+  font-weight: bold;
 }
