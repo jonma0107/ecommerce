@@ -5,8 +5,11 @@ let carritoCompras = [];
 const contenedorCarrito = document.querySelector('#lista-carrito tbody')
 
 function registrarEventListeners() {
-  listaProductos.addEventListener('click', agregarProducto)
+  listaProductos.addEventListener('click', agregarProducto);
+  carrito.addEventListener('click', eliminarProducto);
 }
+
+// ***************************  FUNCIONES  *****************************
 
 function agregarProducto(e) {
   e.preventDefault();
@@ -16,9 +19,20 @@ function agregarProducto(e) {
 
     leerDatosProducto(productoSeleccionado);
 
-  }
+  };
 
-} // fin función agregarProducto
+}; // fin función agregarProducto
+
+
+function eliminarProducto(e) {
+  if (e.target.classList.contains('borrar-producto')) {
+    const productoId = e.target.getAttribute('data-id');
+    carritoCompras = carritoCompras.filter(producto => producto.id !== productoId);
+    carritoHTML();
+
+  };
+}; // fin función eliminarProducto
+
 
 // Lee el contenido del HTML al que le dimos click, y extrae la información del curso
 function leerDatosProducto(producto) {
@@ -77,7 +91,7 @@ function carritoHTML() {
         ${cantidad}
       </td>
       <td>
-        <a href="#" class="borrar-producto"> X </a>
+        <a href="#" class="borrar-producto" data-id="${id}"> X </a>
       </td>
     `;
 
