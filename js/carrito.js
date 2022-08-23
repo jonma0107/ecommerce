@@ -3,13 +3,20 @@ const listaProductos = document.querySelector('.listado-productos');
 let carritoCompras = [];
 
 const contenedorCarrito = document.querySelector('#lista-carrito tbody')
+const vaciarCarrito = document.querySelector('#vaciar-carrito')
 
 function registrarEventListeners() {
   listaProductos.addEventListener('click', agregarProducto);
   carrito.addEventListener('click', eliminarProducto);
-}
+  vaciarCarrito.addEventListener('click', () => {
+    carritoCompras = [];
 
-// ***************************  FUNCIONES  *****************************
+    carritoHTML();
+  })
+
+};
+
+// ***********************************  FUNCIONES  *********************************
 
 function agregarProducto(e) {
   e.preventDefault();
@@ -23,6 +30,7 @@ function agregarProducto(e) {
 
 }; // fin función agregarProducto
 
+// ********************* FUNCION ELIMINA CURSO DEL CARRITO *************************
 
 function eliminarProducto(e) {
   if (e.target.classList.contains('borrar-producto')) {
@@ -33,6 +41,7 @@ function eliminarProducto(e) {
   };
 }; // fin función eliminarProducto
 
+// ******************************************************************************************
 
 // Lee el contenido del HTML al que le dimos click, y extrae la información del curso
 function leerDatosProducto(producto) {
@@ -45,7 +54,9 @@ function leerDatosProducto(producto) {
     precio: producto.querySelector('.precio').textContent,
     id: producto.querySelector('a').getAttribute('data-id'),
     cantidad: 1
-  }
+  };
+
+  // ******************** REVISA SI UN ELEMENTO YA EXISTE EN EL CARRITO *********************
   // ACTUALIZAR UN PRODUCTO QUE YA EXISTE
   const existe = carritoCompras.some(producto => producto.id === objetoProducto.id);
   if (existe) {
@@ -62,13 +73,12 @@ function leerDatosProducto(producto) {
     // Agrega Objetos al arreglo de carritoCompras
     carritoCompras = [...carritoCompras, objetoProducto];
 
-  }
+  };
 
   carritoHTML();
-} // fin función leerDatosProducto
+}; // fin función leerDatosProducto
 
-
-// MOSTRAR LOS PRODUCTOS DEL CARRITO EN HTML
+// ************************ MUESTRA EL CARRITO DE COMPRAS EN EL HTML **************************
 function carritoHTML() {
   // Limpiar el HTML
   limpiarHTML();
@@ -97,9 +107,11 @@ function carritoHTML() {
 
     // Agrega el HTML del carrito al tbody
     contenedorCarrito.appendChild(row);
-  })
+  });
 
-}
+}; // fin función carritoHTML
+
+//*****************************************************************************************
 
 // Para limpiar el HTML se debe hacer la siguiente función
 // elimina cursos del tbody
@@ -108,11 +120,12 @@ function limpiarHTML() {
   // contenedorCarrito.innerHTML = '';
   //forma rápida
   while (contenedorCarrito.firstChild) {
-    contenedorCarrito.removeChild(contenedorCarrito.firstChild)
+    contenedorCarrito.removeChild(contenedorCarrito.firstChild);
 
-  }
+  };
 
-}
+};
 
+//*****************************************************************************************
 
 registrarEventListeners();
