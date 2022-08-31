@@ -37,42 +37,43 @@
 
         <!-- FORMULARIO -->
 
-        <form class="formulario mx-auto mt-20 bg-white" action="https://formsubmit.co/jm.abogadocitta@gmail.com" method="post">
+        <form class="formulario mx-auto mt-20 bg-white" action="https://formsubmit.co/jm.abogadocitta@gmail.com" method="post" enctype="multipart/form-data">
           <fieldset>
             <legend>Tus Datos</legend>
             <div class="campo mb-10">
-              <label for="nombre">Nombre: </label>
-              <input class="bg-gray-100 border shadow p-3 w-full" type="text" placeholder="Coloca tu nombre" name="" id="nombre" >
+              <label for="Nombre">Nombre: </label>
+              <input class="bg-gray-100 border shadow p-3 w-full" type="text" placeholder="Coloca tu nombre" name="Nombre" id="nombre" >
             </div>
 
             <div class="campo mb-10">
-              <label for="asunto">Asunto: </label>
-              <input class="bg-gray-100 border shadow p-3 w-full" type="text" placeholder="Tu asunto" name="" id="asunto" >
+              <label for="Asunto">Asunto: </label>
+              <input class="bg-gray-100 border shadow p-3 w-full" type="text" placeholder="Tu asunto" name="Asunto" id="asunto" >
             </div>
 
             <div class="campo mb-10">
               <label for="email">E-mail: </label>
-              <input class="bg-gray-100 border shadow p-3 w-full" type="email" placeholder="Tu Email" name="" id="email" >
+              <input class="bg-gray-100 border shadow p-3 w-full" type="email" name="email" placeholder="Tu Email" id="email" >
+
             </div>
 
             <div class="campo mb-10">
-              <label for="tel">Teléfono: </label>
-              <input class="bg-gray-100 border shadow p-3 w-full" type="tel" placeholder="Tu Teléfono" name="" id="tel" >
+              <label for="Teléfono">Teléfono: </label>
+              <input class="bg-gray-100 border shadow p-3 w-full" type="tel" placeholder="Tu Teléfono" name="Teléfono" id="tel" >
             </div>
 
             <div class="campo mb-10">
-              <label for="date">Fecha: </label>
-              <input class="bg-gray-100 border shadow p-3 w-full" type="date" placeholder="" name="" id="date" >
+              <label for="Fecha"> Fecha: </label>
+              <input class="bg-gray-100 border shadow p-3 w-full" type="date" placeholder="" name="Fecha" id="date" >
             </div>
 
             <div class="campo mb-10">
-              <label for="mns">Mensaje: </label>
-              <textarea class="bg-gray-100 border shadow p-3 w-full" name="" id="mns" cols="50" rows="10"></textarea>
+              <label for="Mensaje">Mensaje: </label>
+              <textarea class="bg-gray-100 border shadow p-3 w-full" name="Mensaje" id="mns" cols="50" rows="10"></textarea>
             </div>
 
             <div class="campo file mb-10">
               <label for="file">Adjuntar: (opcional) </label>
-              <input class="bg-gray-100 border shadow p-3 w-full" type="file" placeholder="" name="" id="file" >
+              <input class="bg-gray-100 border shadow p-3 w-full" type="file" placeholder="" name="file" id="file" >
             </div>
           </fieldset>
 
@@ -80,7 +81,7 @@
             <legend>País</legend>
             <div class="campo mb-10">
               <label for="pais">País</label>
-              <select name="" id="pais">
+              <select name="pais" id="pais">
                 <option disabled>--Seleccione--</option>
                 <option selected>Seleccione</option>
                 <option value="MX">México</option>
@@ -93,21 +94,21 @@
           <fieldset>
             <legend>Información Extra</legend>
             <div class="campo extra mb-10">
-              <label for="cliente">Cliente</label>
-              <input type="radio" name="SAME" id="cliente">
+              <label for="Cliente">Cliente</label>
+              <input type="radio" name="Cliente" id="cliente">
             </div>
             <div class="campo extra mb-10">
-              <label for="proveedor">Proveedor</label>
-              <input type="radio" name="SAME" id="proveedor">
+              <label for="Proveedor">Proveedor</label>
+              <input type="radio" name="Proveedor" id="proveedor">
             </div>
             <div class="campo extra mb-10">
               <label for="Empleado">Empleado</label>
-              <input type="radio" name="SAME" id="Empleado">
+              <input type="radio" name="Empleado" id="Empleado">
             </div>
 
             <div class="campo mb-10">
               <label for="categoria">Categoría de Interés</label>
-              <input class="bg-gray-100 border shadow p-3 w-full" list="categorias" name="categorias" id="categoria">
+              <input class="bg-gray-100 border shadow p-3 w-full" list="categorias" name="categoria" id="categoria">
               <datalist id="categorias">
                 <option value="Cocina">
                 <option value="Oficina">
@@ -118,7 +119,12 @@
 
           </fieldset>
 
+          <input type="hidden" name="_next" value="https://jonma0107.github.io/ecommerce/nosotros.html">
+          <!-- <input type="hidden" name="_captcha" value="false"> -->
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_autoresponse" value="Muchas gracias! Hemos recibido tu Mensaje Estaremos próximamente en contacto">
           <input class="enviar" type="submit" value="Enviar Formulario">
+
         </form> <!-- fin formulario -->
 
     </main>
