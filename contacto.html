@@ -11,12 +11,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+
+    <link type="text/css" rel="stylesheet" href="css/tailwind.min.css"  media="screen,projection"/>
+
 </head>
 
 <body>
-    <header>
+    <!-- <header>
         <h1 class="nombre-sitio">Tienda <span>Muebles</span></h1>
-    </header><!-- Título sitio -->
+    </header>Título sitio -->
 
     <div class="contenedor-navegacion">
         <nav class="nav-principal contenedor">
@@ -30,56 +33,56 @@
     </div>
 
     <main class="contenido-principal contenedor">
-        <h2 class="text-center">Contacto</h2>
+        <h2 class="text-center" style="font-size: 30px;">Contacto</h2>
 
         <!-- FORMULARIO -->
 
-        <form class="formulario" action="https://formsubmit.co/jm.abogadocitta@gmail.com" method="post">
+        <form class="formulario mx-auto mt-20 bg-white" action="https://formsubmit.co/jm.abogadocitta@gmail.com" method="post">
           <fieldset>
             <legend>Tus Datos</legend>
-            <div class="campo">
+            <div class="campo mb-10">
               <label for="nombre">Nombre: </label>
-              <input type="text" placeholder="Coloca tu nombre" name="" id="nombre" required>
+              <input class="bg-gray-100 border shadow p-3 w-full" type="text" placeholder="Coloca tu nombre" name="" id="nombre" >
             </div>
 
-            <div class="campo">
+            <div class="campo mb-10">
               <label for="asunto">Asunto: </label>
-              <input type="text" placeholder="Tu asunto" name="" id="asunto" required>
+              <input class="bg-gray-100 border shadow p-3 w-full" type="text" placeholder="Tu asunto" name="" id="asunto" >
             </div>
 
-            <div class="campo">
+            <div class="campo mb-10">
               <label for="email">E-mail: </label>
-              <input type="email" placeholder="Tu Email" name="" id="email" required>
+              <input class="bg-gray-100 border shadow p-3 w-full" type="email" placeholder="Tu Email" name="" id="email" >
             </div>
 
-            <div class="campo">
+            <div class="campo mb-10">
               <label for="tel">Teléfono: </label>
-              <input type="tel" placeholder="Tu Teléfono" name="" id="tel" required>
+              <input class="bg-gray-100 border shadow p-3 w-full" type="tel" placeholder="Tu Teléfono" name="" id="tel" >
             </div>
 
-            <div class="campo">
+            <div class="campo mb-10">
               <label for="date">Fecha: </label>
-              <input type="date" placeholder="" name="" id="date" required>
+              <input class="bg-gray-100 border shadow p-3 w-full" type="date" placeholder="" name="" id="date" >
             </div>
 
-            <div class="campo">
+            <div class="campo mb-10">
               <label for="mns">Mensaje: </label>
-              <textarea name="" id="mns" cols="50" rows="10"></textarea>
+              <textarea class="bg-gray-100 border shadow p-3 w-full" name="" id="mns" cols="50" rows="10"></textarea>
             </div>
 
-            <div class="campo file">
+            <div class="campo file mb-10">
               <label for="file">Adjuntar: </label>
-              <input type="file" placeholder="" name="" id="file">
+              <input class="bg-gray-100 border shadow p-3 w-full" type="file" placeholder="" name="" id="file">
             </div>
           </fieldset>
 
           <fieldset>
             <legend>País</legend>
-            <div class="campo">
+            <div class="campo mb-10">
               <label for="pais">País</label>
               <select name="" id="pais">
                 <option disabled>--Seleccione--</option>
-                <option selected>Colombia</option>
+                <option selected>Seleccione</option>
                 <option value="MX">México</option>
                 <option value="AR">Argentina</option>
                 <option value="CL">Chile</option>
@@ -89,22 +92,22 @@
 
           <fieldset>
             <legend>Información Extra</legend>
-            <div class="campo extra">
+            <div class="campo extra mb-10">
               <label for="cliente">Cliente</label>
               <input type="radio" name="SAME" id="cliente">
             </div>
-            <div class="campo extra">
+            <div class="campo extra mb-10">
               <label for="proveedor">Proveedor</label>
               <input type="radio" name="SAME" id="proveedor">
             </div>
-            <div class="campo extra">
+            <div class="campo extra mb-10">
               <label for="Empleado">Empleado</label>
               <input type="radio" name="SAME" id="Empleado">
             </div>
 
-            <div class="campo">
+            <div class="campo mb-10">
               <label for="categoria">Categoría de Interés</label>
-              <input list="categorias" name="categorias" id="categoria">
+              <input class="bg-gray-100 border shadow p-3 w-full" list="categorias" name="categorias" id="categoria">
               <datalist id="categorias">
                 <option value="Cocina">
                 <option value="Oficina">
@@ -155,6 +158,7 @@
         <p class="footer-copy">© JM. All rights reserved</p>
     </footer>
 
+    <script src="./js/mensajeria.js"></script>
 </body>
 
 </html>
