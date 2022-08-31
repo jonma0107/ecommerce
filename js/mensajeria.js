@@ -9,6 +9,7 @@ const tel = document.querySelector('#tel');
 const date = document.querySelector('#date');
 const mns = document.querySelector('#mns');
 
+const er = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; // EXPRESIÓN REGULAR
 
 registroEventos();
 
@@ -50,8 +51,6 @@ function validarFormulario(e) {
   /******************************************* Validar email *********************************/
   if (e.target.type === 'email') {
 
-    const er = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; // EXPRESIÓN REGULAR
-
     if (er.test(e.target.value)) {
       const error = document.querySelector('p.error')
       if (error) {
@@ -62,9 +61,15 @@ function validarFormulario(e) {
       e.target.style.borderColor = 'red';
       mostrarError('El email no es válido');
     }
-
-
   }
+
+  /************************************ ACTIVAR btnEnviar *********************************** */
+  // email.value !== ''
+  if (nombre.value !== '' && asunto.value !== '' && er.test(email.value) && tel.value !== '' && date.value !== '' && mns.value !== '') {
+    btnEnviar.disabled = false;
+    btnEnviar.classList.remove('cursor-not-allowed', 'opacity-50')
+  }
+
 } // FIN FUNCIÓN DE VALIDACIÓN DE FORMULARIO
 
 /***********************************************************************************************/
