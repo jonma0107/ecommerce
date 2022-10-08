@@ -5,14 +5,23 @@ let carritoCompras = [];
 const contenedorCarrito = document.querySelector('#lista-carrito tbody')
 const vaciarCarrito = document.querySelector('#vaciar-carrito')
 
+
+//**********************  REGISTRO DE FUNCIONES ******************* /
+
 function registrarEventListeners() {
-  listaProductos.addEventListener('click', agregarProducto);
-  carrito.addEventListener('click', eliminarProducto);
+  listaProductos.addEventListener('click', agregarProducto); // AGREGAR AL CARRITO
+  carrito.addEventListener('click', eliminarProducto); // ELIMINAR DEL CARRITO
   vaciarCarrito.addEventListener('click', () => {
-    carritoCompras = [];
+    carritoCompras = []; // VACIAR CARRITO
 
     carritoHTML();
-  })
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    carritoCompras = JSON.parse(localStorage.getItem('carrito')) || [];
+
+    carritoHTML();
+  });
 
 };
 
@@ -30,7 +39,7 @@ function agregarProducto(e) {
 
 }; // fin función agregarProducto
 
-// ********************* FUNCION ELIMINA CURSO DEL CARRITO *************************
+// ********************* FUNCION ELIMINA PRODUCTO DEL CARRITO *************************
 
 function eliminarProducto(e) {
   if (e.target.classList.contains('borrar-producto')) {
@@ -41,11 +50,10 @@ function eliminarProducto(e) {
   };
 }; // fin función eliminarProducto
 
-// ******************************************************************************************
+// **************************  FUNCION LEER DATOS DEL PRODCUTO  ****************************
 
 // Lee el contenido del HTML al que le dimos click, y extrae la información del curso
 function leerDatosProducto(producto) {
-  // console.log(curso);
 
   // Crear objeto con el contenido del curso seleccionado
   const objetoProducto = {
@@ -63,7 +71,7 @@ function leerDatosProducto(producto) {
     const productos = carritoCompras.map(producto => {
       if (producto.id === objetoProducto.id) {
         producto.cantidad++;
-        return producto;
+        return producto; // Retorna el Objeto actualizado
       } else {
         return producto;
       }
@@ -109,22 +117,30 @@ function carritoHTML() {
     contenedorCarrito.appendChild(row);
   });
 
+  sincronizarLocalStorage();
+
 }; // fin función carritoHTML
 
 //*****************************************************************************************
 
 // Para limpiar el HTML se debe hacer la siguiente función
-// elimina cursos del tbody
+// elimina productos del tbody
 function limpiarHTML() {
-  //forma lenta
+  //forma lenta :
   // contenedorCarrito.innerHTML = '';
-  //forma rápida
+  //forma rápida :
   while (contenedorCarrito.firstChild) {
     contenedorCarrito.removeChild(contenedorCarrito.firstChild);
 
   };
 
 };
+
+//*****************************************************************************************
+
+function sincronizarLocalStorage() {
+  localStorage.setItem('carrito', JSON.stringify(carritoCompras));
+}
 
 //*****************************************************************************************
 
